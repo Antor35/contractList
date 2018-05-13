@@ -1,0 +1,62 @@
+.first{
+	padding: 15px;
+	background-color: black;
+	height: 75px;
+}
+.second{
+	background-color: silver;
+	height:760px;
+}
+.welcome{
+	color:yellow;
+	margin:5px;
+   font-family: Times New Roman;
+}
+.label{
+	font:bold 15px/1 sans-serif;
+	/*font-family: Times New Roman;*/
+}
+.register-form{
+	border-radius: 20px;
+	border: 5px solid gray;
+	padding: 5px;
+	margin-top: 50px;
+}
+.regHead{
+ 	float: right;
+   font-family: Times New Roman;
+}
+.gender{
+	font:bold;
+}
+.add{
+	margin-top: 75px;
+	padding: 75px;
+	/*background-color: green;*/
+	border: 5px solid black;
+}
+.edit{
+	background-color  : gray;
+	margin-top        : 75px;
+	/*border-top        : 5px solid red;
+	border-bottom     : 5px solid green;
+	border-left       : 5px solid orange;
+	border-right      : 5px solid orange;*/
+	border-radius     : 5px;
+	padding-top       : 15px; 
+	padding-left      : 25px; 
+	padding-top       : 15px; 
+	padding-bottom    : 15px; 
+}
+.form-group{
+	padding    :5px; 
+}
+/*.editSubmitBtn:hover{
+	color: white;
+	border-style: outset;
+	border-color: #0066A2;
+	height: 50px;
+	width: 100px;
+	font: bold 15px arial, sans-serif;
+	text-shadow:none;
+}*/

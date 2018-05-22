@@ -23,11 +23,19 @@
       <div class="container-fluid">
 
        		<div class="row first">
+<!--  -->
        			<div class="col-sm-7">
                   <h1 class="welcome">Welcome to Contract List</h1>
            </div>
 
        			<div class="col-sm-5">
+<!--  -->
+       			<!-- <div class="col-md-6">
+                  <h1 class="welcome">Welcome to Contract List</h1>
+           </div>
+
+       			<div class="col-md-6"> -->
+<!--  -->
 
        				<form class="form-inline" role='form' action="loginProcess.php"  method="post">
 

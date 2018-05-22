@@ -15,7 +15,12 @@
 		else{
 
 			$target_dir = "uploads/";
+
 			$target_file = $target_dir.basename($_FILES['img']['name']);
+
+			$t = uniqid();
+			$target_file = $target_dir.$t.basename($_FILES['img']['name']);
+
 			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 			$check = getimagesize($_FILES['img']['tmp_name']);
@@ -32,6 +37,10 @@
 			}
 			 
 			  	move_uploaded_file($tmp_name, $target_file);
+
+
+
+
 			  	$updateImg = $target_file;
 			  	Require 'dataBaseConnection.php';
                 $sql = "SELECT image FROM contracts WHERE id = '$ID' ";

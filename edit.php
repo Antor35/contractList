@@ -34,6 +34,7 @@
 				echo "error".error($conn);
 			}
 			mysqli_close($conn);
+			
 	?>
 <!DOCTYPE html>
 <html>

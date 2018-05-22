@@ -37,6 +37,11 @@
 			$target_dir = "uploads/";
 			$t = uniqid();
 			$target_file = $target_dir.$t.basename($_FILES['img']['name']);
+
+
+			// echo $target_file;
+			// die();
+
 			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 			$check = getimagesize($_FILES['img']['tmp_name']);
@@ -46,11 +51,14 @@
 				$_SESSION['imgErr'] = $imgErr;
 
 			}
+
 			// else if($_FILES["img"]["size"] > 500000){
 
 			// 	$imgErr = "File is larger then 5MB!";
 			// 	$_SESSION['imgErr'] = $imgErr;
 			// }
+
+
 			else if($imageFileType !== "jpg" && $imageFileType !== "png" && $imageFileType !== "jpeg"&& $imageFileType !== "gif"){
 
 				$imgErr = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
@@ -61,6 +69,7 @@
 			    mkdir('/opt/lampp/htdocs/contractList/'.$target_dir);
 			}
 			 
+
 			  //else if(!file_exists($target_file)){
 			  	move_uploaded_file($tmp_name, $target_file);
 			// }
@@ -68,6 +77,9 @@
 				// $imgErr = "This photo is already used!";
 				// $_SESSION['imgErr'] = $imgErr;
 			 // }
+
+			  	move_uploaded_file($tmp_name, $target_file);
+
 		}
 	}
 

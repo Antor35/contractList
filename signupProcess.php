@@ -102,8 +102,35 @@
 		$sql = " INSERT INTO users (firstName, lastName, gender, email, password) VALUES ('$firstName', '$lastName', '$gender', '$email', '$password')";
 
 		if($conn->query($sql)===true){
+
 			$_SESSION['username'] = $firstName;
 			header('location: createContract.php');
+
+			 $_SESSION['username'] = $firstName;
+			 
+							require 'dataBaseConnection.php';
+							$sql = "SELECT email,password from users Where email='$email' AND password='$password'";
+							$result = mysqli_query($conn,$sql);
+							$rowNum = mysqli_num_rows($result);
+							$found = false;
+							$isAccount = false;
+							if($rowNum>0){
+								$_SESSION['email'] = $email; 
+								$_SESSION['login'] = 'yes';
+								header('location: createContract.php');
+								exit();
+								}
+								else{
+
+										$_SESSION['accountExist']="Incorrect Email or Password <br> Try aganin Here";
+										header('location:login.php');
+										exit();
+								}
+							  mysqli_close($conn);
+
+			header('location: createContract.php');
+			exit();
+
 		}else{
 			echo "Error occar".$conn->error;
 		}
